@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--Aluna: Maílla Costa Ferreira / Turma: 3°C-->
+
+<html>
+<body style="background-color: rgb(167, 127, 205);">
+
+<h2>Formulario de  Pagamento!</h2>
+<h4>Por favor preencher todos os campos!</h4>
+
+<form name="FormPag" action="" method="post">
+  <label for="Nome">Insira seu nome completo:</label><br>
+  <input type="text" id="Nome" name="Nome" value=""><br>
+
+  <label for="CPF">Insira seu CPF:</label><br>
+  <input type="text" id="cpf" name="cpf" value=""><br>
+  
+  <label for="Email">Insira seu E-mail:</label><br>
+  <input type="email" id="email" name="email" value=""><br>
+  
+  <label for="Pagamento">Selecione a melhor forma de pagamento para você:</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Boleto">
+  <label for="Fpagamento">Boleto</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Pix">
+  <label for="Fpagamento">Pix</label><br>
+
+  <input type="radio" id="Fpag" name="Form_pag" value="Cartão">
+  <label for="Fpag">Cartão</label><br>
+  
+  <input type="submit" value="Enviar" onclick="validar()">
+</form> 
+
+<script>
+    var Nome;
+
+    function validar() {
+        Nome = document.FormPag.Nome.value;
+        window.alert('Olá ' + Nome + ', O processo de pagamento foi realizado com sucesso! Seja bem vindo(a)!');
+    }
+</script>
+
+
+</body>
+</html>
