@@ -4,7 +4,7 @@
 <html>
 <body style="background-color: rgb(167, 127, 205);">
 
-<h2>Formulario de  Pagamento!</h2>
+<h2 style="text-align: center;">Formulario de  Pagamento</h2><br>
 <h4>Por favor preencher todos os campos!</h4>
 
 <form name="FormPag" action="" method="post">
@@ -36,7 +36,17 @@
 
     function validar() {
         Nome = document.FormPag.Nome.value;
-        window.alert('Olá ' + Nome + ', O processo de pagamento foi realizado com sucesso! Seja bem vindo(a)!');
+        Cpf = document.FormPag.cpf.value;
+
+        if(Nome.length > 30){
+            window.alert("Nome inválido, revisar campo de Nome Completo.");
+            
+        }
+
+        if(Cpf.length > 14 || Cpf.length < 14){
+            window.alert("CPF inválido, revisar campo de CPF.")
+        }
+
     }
 </script>
 
