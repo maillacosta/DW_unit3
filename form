@@ -11,7 +11,7 @@
   <label for="Nome">Insira seu nome completo:</label><br>
   <input type="text" id="Nome" name="Nome" value=""><br>
 
-  <label for="CPF">Insira seu CPF:</label><br>
+  <label for="CPF">Insira seu CPF ( Não desprezar . e - ):</label><br>
   <input type="text" id="cpf" name="cpf" value=""><br>
   
   <label for="Email">Insira seu E-mail:</label><br>
@@ -37,6 +37,7 @@
     function validar() {
         Nome = document.FormPag.Nome.value;
         Cpf = document.FormPag.cpf.value;
+        Email = document.FormPag.email.value;
 
         if(Nome.length > 30){
             window.alert("Nome inválido, revisar campo de Nome Completo.");
@@ -46,6 +47,19 @@
         if(Cpf.length > 14 || Cpf.length < 14){
             window.alert("CPF inválido, revisar campo de CPF.")
         }
+
+        if(Email == ""){
+            window.alert("O campo está vazio, para continuar preencha-o.")
+        }
+
+        if(Email.indexOf("@") < 1){
+            window.alert("E-mail iválido, EX: exemplo@gmail.com")
+        }
+
+        if(Email.indexOf(".") < Email.indexOf("@") + 2 || Email.indexOf(".")
+            == Emial.length - 1){
+                window.alert("E-mail iválido, EX: exemplo@gmail.com")  
+            }
 
     }
 </script>
